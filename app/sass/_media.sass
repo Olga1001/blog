@@ -1,0 +1,94 @@
+@import "vars"
+//@import "fonts"
+//@import "main"
+
+//@media (min-width: 1101px) and (max-width: 1560px)
+
+@media only screen and (max-width : 1200px)
+  .wrap-blog-card
+    width: calc(33.33% - 12px)
+  .wrap-blog-title
+    font-size: 2vw
+  .wrap-blog-text
+    font-size: 14px
+  .wrap-offer-phone
+    margin-left: 0
+  .wrap-offer-title
+    left: 10px
+    transform: translateX(0)
+@media only screen and (max-width : 1024px)
+  .header
+    padding: 20px 0 20px
+    &-flex
+      justify-content: space-between
+    &-menu
+      position: absolute
+      width: 100%
+      padding: 15px 15px
+      background: rgba(#000000, 0.6)
+      display: block
+      margin: 0
+      top: 164px
+      left: 0
+      text-align: right
+      opacity: 0
+      pointer-events: none
+      transform: translateY(-100px)
+      transition: all 0.3s ease
+      z-index: 9
+      &.active
+        opacity: 1
+        pointer-events: auto
+        transform: translateY(0)
+    &-link
+      padding: 15px 5px
+      margin: 0
+    &-btn-menu
+      display: block
+  .wrap-offer
+    height: 100vh
+  .header-link:before
+    bottom: 5px
+  .wrap-offer-block
+    top: 164px
+@media only screen and (max-width : 767px)
+  .wrap-blog-card
+    width: calc(50% - 12px)
+  .wrap-blog-title
+    font-size: 3vw
+  .wrap-blog-text-main
+    font-size: 21px
+    br
+      display: none
+  .wrap-tabs-menu
+    display: block
+  .wrap-tabs-link
+    padding: 15px 0 23px
+    width: auto
+  .wrap-tabs-menu
+    padding: 15px 0
+@media only screen and (max-width : 480px)
+  .header
+    padding: 10px 0 10px
+    &-menu
+      top: 108px
+  .wrap-blog-card
+    width: calc(100% - 12px)
+  .header-logo
+    width: 200px
+  .wrap-offer-phone, .wrap-offer-title
+    font-size: 26px
+  .wrap-blog-title
+    font-size: 5.5vw
+  .wrap-blog-card
+    padding: 10px 10px 15px 10px
+  .wrap-blog-text
+    padding: 0 0
+  .wrap-offer-block
+    top: 108px
+@media only screen and (max-height : 400px)
+  .wrap-offer
+    height: 100%
+  .wrap-offer-title
+    position: inherit
+    margin: 100px 0

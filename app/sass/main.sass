@@ -1,0 +1,392 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  line-height: 1
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #858686
+  font-family: "opensanshebrew-light", sans-serif
+  font-size: 23px
+  font-weight: 300
+  line-height: 1
+
+*:-moz-placeholder
+  color: #858686
+  font-family: "opensanshebrew-light", sans-serif
+  font-size: 23px
+  font-weight: 300
+  line-height: 1
+
+*::-moz-placeholder
+  color: #858686
+  font-family: "opensanshebrew-light", sans-serif
+  font-size: 23px
+  font-weight: 300
+  line-height: 1
+
+*:-ms-input-placeholder
+  color: #858686
+  font-family: "opensanshebrew-light", sans-serif
+  font-size: 23px
+  font-weight: 300
+  line-height: 1
+
+input[type=text]::-ms-clear
+  display: none
+  width: 0
+  height: 0
+
+input[type=text]::-ms-reveal
+  display: none
+  width: 0
+  height: 0
+
+::-webkit-scrollbar
+  width: 10px
+  height: 3px
+
+::-webkit-scrollbar-thumb
+  background: #ccc
+
+input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-webkit-search-results-button, input::-webkit-search-results-decoration
+  display: none
+  -webkit-appearance: none
+
+input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-webkit-search-results-button, input::-webkit-search-results-decoration
+  display: none
+  -webkit-appearance: none
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #d4dae1
+
+body input:required:valid,
+body textarea:required:valid
+  font-size: 14.94px
+  font-family: "LatoBold", sans-serif
+  text-transform: capitalize
+
+textarea
+  color: #858686
+  font-family: "opensanshebrew-light", sans-serif
+  font-size: 23px
+  font-weight: 300
+  line-height: 1
+  width: 100%
+  height: 165px
+  overflow-y: auto
+  border-radius: 10px
+  background-color: #ffffff
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+a
+  text-decoration: none
+  line-height: 1
+  display: inline-block
+body
+  width: 100%
+
+.container
+  max-width: 1500px
+  width: 100%
+  margin: 0 auto
+  padding: 0 15px
+.bold
+  font-family: "Assistant-Bold", sans-serif
+  font-weight: 700
+.orange
+  color: #ff7b00
+.semi-bold
+  font-family: "Assistant-SemiBold", sans-serif
+  font-weight: 600
+.header
+  position: fixed
+  z-index: 9
+  width: 100%
+  padding: 30px 0 35px
+  background: rgba(#000000, 0.6)
+  &-flex
+    display: flex
+    justify-content: space-around
+    align-items: center
+  &-logo
+    width: 330px
+  &-menu
+    display: flex
+
+  &-link
+    color: #ffffff
+    font-family: "Assistant-Regular", sans-serif
+    font-size: 21px
+    font-weight: 400
+    text-decoration: none
+    margin: 0 10px
+    padding: 0 5px
+    display: inline-block
+    position: relative
+    transition: all 0.3s ease
+    white-space: nowrap
+    &.active
+      color: #ff7b00
+      &:before
+        height: 5px
+    &:hover
+      color: #ff7b00
+    &:before
+      content: ''
+      position: absolute
+      bottom: -8px
+      left: 0
+      width: 100%
+      background: #ff7b00
+      border-radius: 3px
+      transition: all 0.3s ease
+      height: 0
+    &:hover:before
+      height: 5px
+
+  &-btn-menu
+    cursor: pointer
+    width: 34px
+    height: 34px
+    position: relative
+    -webkit-transition: background-color .5s ease
+    transition: background-color .5s ease
+    display: none
+
+  &-btn-menu.btn-active
+    z-index: 2
+    border-radius: 50px
+
+  &-btn-menu.bg-active
+    border-radius: 50px
+    z-index: 3
+
+.header-btn-menu.btn-active .header-line, .header-btn-menu.bg-active .header-line
+  background: #ffffff
+
+.header-btn-menu.btn-active .header-line_center, .header-btn-menu.bg-active .header-line_center
+  opacity: 0
+
+.header-btn-menu.btn-active .header-line_top, .header-btn-menu.bg-active .header-line_top
+  -webkit-transform: translateY(7px) rotate(225deg)
+  transform: translateY(7px) rotate(225deg)
+
+.header-btn-menu.btn-active .header-line_bottom, .header-btn-menu.bg-active .header-line_bottom
+  -webkit-transform: translateY(-7px) rotate(-225deg)
+  transform: translateY(-7px) rotate(-225deg)
+
+.header-line
+  width: 20px
+  height: 2px
+  display: block
+  background: #ffffff
+  position: absolute
+  left: calc(50% - 10px)
+  -webkit-transition: all .5s ease
+  transition: all .5s ease
+
+.header-line.header-line_top
+  top: 10px
+
+.header-line.header-line_center
+  top: 50%
+
+.header-line.header-line_bottom
+  bottom: 8px
+
+.wrap
+  &-offer
+    background: url("../img/offer.jpg") no-repeat center bottom / cover
+    height: calc(100vh - 86px)
+    position: relative
+    &-block
+      position: fixed
+      top: 159px
+      z-index: 3
+    &-phone
+      color: #ffffff
+      font-family: "Assistant-Regular", sans-serif
+      font-size: 34px
+      font-weight: 400
+      text-decoration: none
+      background: #ff7b00
+      padding: 11px 33px 14px
+      margin-left: 122px
+    &-title
+      color: #ffffff
+      font-family: "Assistant-Regular", sans-serif
+      font-size: 35px
+      font-weight: 400
+      position: absolute
+      top: 55%
+      left: 14%
+      transform: translateX(-14%)
+      text-shadow: 0 0 20px #000000
+  &-tabs
+    background: #ff7b00
+    width: 100%
+    &-menu
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+    &-link
+      color: #ffffff
+      font-family: "Assistant-Regular", sans-serif
+      font-size: 31px
+      font-weight: 400
+      padding: 26px 10px 29px
+      white-space: nowrap
+      position: relative
+      transition: all 0.3s ease
+      &:before
+        content: ''
+        position: absolute
+        left: 50%
+        bottom: 0
+        transform: translateX(-50%)
+        width: 26px
+        height: 0
+        transition: all 0.3s ease
+        background: url("../img/arrow.png") no-repeat center bottom / 26px 22px
+      &:hover:before
+        height: 22px
+
+  &-blog
+    padding: 55px 0
+    &-flex
+      display: flex
+      justify-content: start
+      flex-wrap: wrap
+    &-text
+      color: #484848
+      font-family: "Assistant-Regular", sans-serif
+      font-size: 16px
+      font-weight: 400
+      text-align: center
+      padding: 0 10px
+      &-block
+        height: 85px
+        overflow: hidden
+      &-main
+        font-family: "Assistant-Regular", sans-serif
+        max-width: 1005px
+        width: 100%
+        text-align: center
+        margin: 0 auto
+        font-size: 24px
+        font-weight: 400
+        padding: 0 15px 10px
+    &-card
+      width: calc(25% - 12px)
+      margin: 35px 6px 0
+      padding: 18px 18px 30px 18px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      background: rgba(#f1f2f6, 0.5)
+    &-img
+      width: 100%
+      height: 180px
+      object-fit: cover
+    &-title
+      color: #484848
+      font-family: "Assistant-Bold", sans-serif
+      font-size: 1.35vw
+      font-weight: 700
+      margin: 34px 0 17px
+      text-align: center
+    &-btn
+      margin: 30px auto 0
+      display: block
+      text-align: center
+      border-radius: 19px
+      background: #ff7b00
+      padding: 3px 0 9px
+      color: #ffffff
+      font-family: "Assistant-Regular", sans-serif
+      width: 155px
+      font-size: 26px
+      font-weight: 400
+  &-pages
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-top: 55px
+    &-link
+      color: #ff7b00
+      font-family: "opensanshebrew-regular", sans-serif
+      border: 1px solid #ff7b00
+      width: 32px
+      height: 32px
+      padding: 2px 8px
+      display: block
+      font-size: 25px
+      font-weight: 400
+      letter-spacing: 3.04px
+      margin-right: 5px
+      border-radius: 50%
+      &:last-child
+        margin-right: 0
+      &:hover, &.active
+        background: #1b1f2a
+        border: 1px solid #1b1f2a
+    &-point
+      font-size: 19px
+      letter-spacing: 0.5px
+.img-next, .img-prev
+  width: 14px
+  height: 15px
+  margin-bottom: 1px
+
+.line-clamp
+  display: block
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  position: relative
+  line-height: 1.3
+  overflow: hidden
+  text-overflow: ellipsis
+
+.line-clamp:after
+  content: '...'
+  text-align: center
+  bottom: 0
+  right: 0
+  width: 25%
+  display: block
+  position: absolute
+  height: calc(1em * 1.3)
+  background: linear-gradient(to left, rgba(241, 242, 246, 0.1), rgba(241, 242, 246, 0.5) 75%)
+
+@supports (-webkit-line-clamp: 1)
+  .line-clamp:after
+    display: none !important
+.line-clamp-4
+  -webkit-line-clamp: 4
+  height: calc(1em * 1.3 * 4)
+
+@import "media"
+
